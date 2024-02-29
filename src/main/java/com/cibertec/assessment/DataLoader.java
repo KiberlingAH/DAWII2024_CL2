@@ -8,15 +8,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cibertec.assessment.model.Polygon;
+import com.cibertec.assessment.model.Square;
 import com.cibertec.assessment.service.PolygonService;
+import com.cibertec.assessment.service.SquareService;
 
 import jakarta.annotation.PostConstruct;
+import lombok.Builder;
 
 @Component
 public class DataLoader {
 
 	@Autowired
 	PolygonService polygonService;
+	
+	@Autowired
+	SquareService sqservice;
 
 	@PostConstruct
 	public void initializeData() {
@@ -37,4 +43,5 @@ public class DataLoader {
 		
 		//polygonService.list();
 	}
+	
 }

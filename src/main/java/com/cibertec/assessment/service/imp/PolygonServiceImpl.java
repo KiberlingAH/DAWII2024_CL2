@@ -51,13 +51,15 @@ public class PolygonServiceImpl implements PolygonService {
 	}
 
 	private void convertStringInIntegerArray(String xPoints, String yPoints, Integer[] intArrayX, Integer[] intArrayY) {
-
-		String cleanedXPoints = xPoints.substring(1, xPoints.length() - 1);
+		// xPoints = [1, 2, 3, 4, 5]
+		
+		String cleanedXPoints = xPoints.substring(1, xPoints.length() - 1); // 1, 2, 3, 4, 5
 		String cleanedYPoints = yPoints.substring(1, yPoints.length() - 1);
 
 		// Split the string by commas
-		String[] partsX = cleanedXPoints.split(", ");
+		String[] partsX = cleanedXPoints.split(", "); // Array [1, 2, 3, 4, 5]
 		String[] partsY = cleanedYPoints.split(", ");
+		
 
 		for (int i = 0; i < partsX.length; i++) {
 			intArrayX[i] = Integer.parseInt(partsX[i]);
@@ -66,6 +68,7 @@ public class PolygonServiceImpl implements PolygonService {
 		for (int i = 0; i < partsY.length; i++) {
 			intArrayY[i] = Integer.parseInt(partsY[i]);
 		}
+		
 	}
 
 }

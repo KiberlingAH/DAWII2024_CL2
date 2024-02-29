@@ -13,8 +13,8 @@ public class DibujarPoligono extends JPanel {
     Double xpoint1[] = {10.0, 205.0, 305.0, 405.0, 500.0};
     Double ypoint1[] = {10.0, 501.0, 506.0, 107.0, 30.0};
 
-//    Double xpoint1[] = {100.0, 605.0, 305.0, 405.0, 500.0};
-//    Double ypoint1[] = {100.0, 601.0, 506.0, 337.0, 300.0};
+    //Double xpoint1[] = {0.0, 200.0, 200.0, 0.0};
+    //Double ypoint1[] = {0.0, 0.0, 200.0, 200.0};
     
     @Override
     protected void paintComponent(Graphics g) {
